@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn" onclick="quote(),BackColor()">Click Me For Quote</button>
+    <h2 id="h"></h2>
+
+    <script>
+      function quote() {
+        const sen = [
+          "Coding like poetry should be short and concise",
+          "Clean code always looks like it was written by someone who cares",
+          "Great web design without functionality is like a sports car with no engine",
+          "A website without SEO is like a car with no gas",
+          "Usability's strength is in identifying problems, while design's strength is in identifying solutions",
+          "Programming is just saying “I have a meeting in an hour so better not start on this yet” to yourself until you die",
+          "The computer was born to solve problems that did not exist before",
+          "Rules of Optimisation: Rule 1: Don't do it. Rule 2 (for experts only): Don't do it yet.",
+          "No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first",
+        ];
+        quotation = sen[Math.floor(Math.random() * sen.length)];
+        let h11 = document.getElementById("h");
+        h11.innerHTML = quotation;
+        let btn = document.getElementById("btn");
+        btn.style.backgroundColor = "transparent";
+      }
+       
+      let btn = document.getElementById("btn");
+      btn.style.height = "35px";
+      btn.style.fontFamily = "arail";
+      btn.style.fontSize = "20px";
+
+      function color() {
+        let a = "0123456789ABCDEF";
+        let color = "#";
+        for ( i = 0; i < 6; i++) {
+          color += a[Math.floor(Math.random() * 14)];
+        }
+        return color;
+      }
+      function BackColor() {
+        document.body.style.backgroundColor = color();
+      }
+    </script>
+  </body>
+</html>
